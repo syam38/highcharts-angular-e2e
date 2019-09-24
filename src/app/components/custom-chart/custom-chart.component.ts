@@ -20,32 +20,24 @@ export class CustomChartComponent extends ChartComponent implements OnInit {
     console.log('onChartSave');
     const localOptions: Options = {};
 
-    localOptions.chart = { type: 'column' };
+    localOptions.chart = { type: 'line' };
     localOptions.credits = { enabled: false };
 
     localOptions.series = [
       {
         data: [
-          { x: Date.UTC(2018, 6, 16), y: 6 },
-          { x: Date.UTC(2018, 6, 17), y: 5 },
-          { x: Date.UTC(2018, 6, 18), y: 8 },
-          { x: Date.UTC(2018, 6, 19), y: 5 }
+          { x: Date.UTC(2018, 6, 16), y: 2.5 },
+          { x: Date.UTC(2018, 6, 17), y: 2 },
+          { x: Date.UTC(2018, 6, 18), y: 4 },
+          { x: Date.UTC(2018, 6, 19), y: 3 }
         ],
-        color: 'greenyellow'
+        color: 'green'
       },
-      // {
-      //   data: [
-      //     { x: Date.UTC(2018, 6, 16), y: 2.5 },
-      //     { x: Date.UTC(2018, 6, 17), y: 2 },
-      //     { x: Date.UTC(2018, 6, 18), y: 4 },
-      //     { x: Date.UTC(2018, 6, 19), y: 3 }
-      //   ],
-      //   color: 'green'
-      // }
     ];
 
 
     this.chartComponent.updateChart(localOptions);
+  
   }
 
   add1 = () => {

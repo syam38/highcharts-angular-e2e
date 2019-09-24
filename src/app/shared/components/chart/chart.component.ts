@@ -47,13 +47,6 @@ export class ChartComponent implements OnInit {
   constructor(private cdr: ChangeDetectorRef) { }
 
   ngOnInit() {
-
-    // this.chartOptions = {
-    //   series: [{
-    //     data: [1, 2, 3]
-    //   }]
-    // }
-    console.log('ngOnInit - parent');
     this.initChart();
   }
 
