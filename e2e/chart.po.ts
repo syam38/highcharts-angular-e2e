@@ -14,7 +14,7 @@ export class OccurrenceChart {
 
     async hoverOverASeries() {
        const webElement = await element(by.css('.highcharts-point')).getWebElement();
-        return browser.actions().mouseMove(webElement).perform();
+        return browser.actions().mouseMove(webElement).mouseMove(webElement).perform();
     }
 
     // getTooltip() {
@@ -25,6 +25,6 @@ export class OccurrenceChart {
     // }
 
     getTooltip() {
-        return element(by.css('.highcharts-tooltip-box>text>tspan')).getText();
+        return element(by.css('.highcharts-tooltip-box+text>tspan')).getText();
     }
 }
